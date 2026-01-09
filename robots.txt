@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /html/
+Allow: /css/
+Allow: /js/
+Allow: /image/
+
+Sitemap: https://itsnishant.com/sitemap.xml
+
+# SEO Keywords: Govt Polytechnic Mandi Adampur, GPMA, Government Polytechnic Mandi Adampur, Polytechnic Mandi Adampur, Polytechnic Adampur, Mandi Adampur Polytechnic, Haryana Polytechnic, Diploma in Computer Engineering, Diploma in CS, Haryana Diploma
