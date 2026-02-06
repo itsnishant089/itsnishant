@@ -7,4 +7,4 @@ Allow: /image/
 
 Sitemap: https://itsnishant.com/sitemap.xml
 
-# SEO Keywords: Govt Polytechnic Mandi Adampur, GPMA, Government Polytechnic Mandi Adampur, Polytechnic Mandi Adampur, Polytechnic Adampur, Mandi Adampur Polytechnic, Haryana Polytechnic, Diploma in Computer Engineering, Diploma in CS, Haryana Diploma
+# SEO Keywords: Nishant, its nishant, Its nishant, itsnishant, nishant gpma, nishant dcrust, nishant diploma cs, nishant batch cse dcrust, Govt Polytechnic Mandi Adampur, GPMA, Government Polytechnic Mandi Adampur, Polytechnic Mandi Adampur, Polytechnic Adampur, Mandi Adampur Polytechnic, Haryana Polytechnic, Haryana Polytechnic IT SE, Government Polytechnic IT SE, Government Polytechnic IT, Haryana Polytechnic IT, Diploma in Computer Engineering, Diploma in CS, Diploma CS, Diploma CSE, Haryana Diploma, Batch CSE DCRUST, DCRUST Murthal, B.Tech CSE DCRUST, All Haryana Polytechnic
