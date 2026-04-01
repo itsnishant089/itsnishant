@@ -1790,3 +1790,47 @@ img[loading="lazy"].loaded {
         page-break-inside: avoid;
     }
 }
+/* ============================================
+   Hackathon Badge & Enhanced Project Cards
+   ============================================ */
+.project-hackathon {
+    border: 2px solid rgba(168, 85, 247, 0.25) !important;
+    position: relative;
+}
+
+.hackathon-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f72585 100%);
+    color: white;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.project-link:hover {
+    color: var(--secondary-color);
+    gap: 0.6rem;
+}
+
+/* Achievement hackathon highlight */
+.achievement-hackathon {
+    border: 2px solid rgba(168, 85, 247, 0.2);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.04) 0%, rgba(236, 72, 153, 0.04) 100%);
+}
+.achievement-hackathon h3 {
+    font-size: 1rem;
+}
