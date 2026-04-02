@@ -1834,3 +1834,16 @@ img[loading="lazy"].loaded {
 .achievement-hackathon h3 {
     font-size: 1rem;
 }
+
+/* ============================================
+   Cert Detail - extra description line
+   ============================================ */
+.cert-detail {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+.certification-card.featured-cert .cert-detail {
+    color: rgba(255,255,255,0.8);
+}
