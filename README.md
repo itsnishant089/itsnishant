@@ -37,8 +37,8 @@
 
 | 🏅 Medal | 🎯 Event | 🏛️ Organizer | 📅 Year |
 |:---:|---|---|:---:|
-| 🥇 **1st Place** | **Orbix** | IIIT Delhi | 2025 |
-| 🥈 **2nd Place** | **HACKRUST** | DCRUST Murthal | 2025 |
+| 🥇 **1st Place** | **Orbix** | IIIT Delhi | 2026 |
+| 🥈 **2nd Place** | **HACKRUST** | DCRUST Murthal | 2026 |
 | 🥈 **2nd Place** | National Technology Day — Project Exhibition | GPMA | 2025 |
 | 🎨 **Participant** | Visual Vortex 2.0 | GDG on Campus · Rishihood University | 2025 |
 | 🏅 **Award** | Best Volunteer Award | NSS · Awarded by IPS Officer | — |
@@ -209,8 +209,8 @@ Or connect the GitHub repo on [vercel.com](https://vercel.com) — auto-detects 
 
 | 🏅 Award | 🏛️ Organization |
 |---|---|
-| 🥇 Orbix — 1st Place | IIIT Delhi · 2025 |
-| 🥈 HACKRUST — 2nd Place | DCRUST Murthal · 2025 |
+| 🥇 Orbix — 1st Place | IIIT Delhi · 2026 |
+| 🥈 HACKRUST — 2nd Place | DCRUST Murthal · 2026 |
 | 🚀 National Technology Day 2025 — 2nd Position | GPMA · Project Exhibition |
 | 🎨 Visual Vortex 2.0 | GDG on Campus · Rishihood University |
 | 🏅 Best Volunteer Award | NSS · Awarded by IPS Officer |
