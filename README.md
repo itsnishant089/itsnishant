@@ -2,7 +2,7 @@
 
 <!-- Animated Typing Header -->
 <a href="https://itsnishant.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Nishant+%F0%9F%91%8B;B.Tech+CSE+%40+DCRUST+Murthal;Hackathon+Winner+%F0%9F%8F%86;Vibe+Coder+%F0%9F%9A%80;Full+Stack+Developer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Nishant+%F0%9F%91%8B;B.Tech+CSE+%40+DCRUST+Murthal;3x+Hackathon+Winner+%F0%9F%8F%86;Vibe+Coder+%F0%9F%9A%80;Full+Stack+Developer" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -39,6 +39,8 @@
 |:---:|---|---|:---:|
 | 🥇 **1st Place** | **Orbix** | IIIT Delhi | 2026 |
 | 🥈 **2nd Place** | **HACKRUST** | DCRUST Murthal | 2026 |
+| 🥈 **2nd Place** | **Technophilia 7.0** | College of Vocational Studies, University of Delhi | 2026 |
+| 🏁 **Finalist** | **SSH-01 (Satyaansh Softech Hackathon)** | PIET · Satyaansh Softech Pvt. Ltd. | — |
 | 🥈 **2nd Place** | National Technology Day — Project Exhibition | GPMA | 2025 |
 | 🎨 **Participant** | Visual Vortex 2.0 | GDG on Campus · Rishihood University | 2025 |
 | 🏅 **Award** | Best Volunteer Award | NSS · Awarded by IPS Officer | — |
@@ -60,6 +62,22 @@ LEET & HSBTE exam platform — 250+ pages, premium tiers, AI chatbot, Razorpay p
 ![Gemini](https://img.shields.io/badge/Gemini%20API-4285F4?style=flat-square&logo=google&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![EmailJS](https://img.shields.io/badge/EmailJS-F59E0B?style=flat-square)
+
+---
+
+### 💎 [Roshni Creations](https://roshnicreations.vercel.app/) &nbsp; ![Live](https://img.shields.io/badge/LIVE-10B981?style=flat-square&logo=vercel&logoColor=white)
+> *2026 · Fine Jewellery E-Commerce Build*
+
+Luxury jewellery e-commerce platform with mobile-first navigation, vertical reels, live metal pricing, Razorpay checkout, Firebase order tracking, and interactive 3D product previews.
+
+![React 18](https://img.shields.io/badge/React%2018-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
+![Firestore](https://img.shields.io/badge/Firestore-FF7139?style=flat-square&logo=firebase&logoColor=white)
+![Razorpay](https://img.shields.io/badge/Razorpay-0055FA?style=flat-square&logo=razorpay&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+![Model Viewer](https://img.shields.io/badge/Model%20Viewer-111827?style=flat-square)
 
 ---
 
@@ -102,16 +120,23 @@ Responsive dynamic website for a diploma college CSE department — syllabus, fa
 
 **Frameworks & Libraries**
 
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 ![Vanilla JS](https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 **Backend & Services**
 
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Firestore](https://img.shields.io/badge/Firestore-FF7139?style=for-the-badge&logo=firebase&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Razorpay](https://img.shields.io/badge/Razorpay-0055FA?style=for-the-badge&logo=razorpay&logoColor=white)
 ![EmailJS](https://img.shields.io/badge/EmailJS-F59E0B?style=for-the-badge)
 ![Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Model Viewer](https://img.shields.io/badge/Model%20Viewer-111827?style=for-the-badge)
 
 **Analytics**
 
@@ -163,8 +188,8 @@ Replace `image/experience.jpeg` with your photo. Recommended: `300×300px` squar
 
 Already configured in `js/main.js`:
 ```js
-emailjs.init('tSLSXcGfuU3S3XDr4');
-emailjs.send('service_7dunjfz', 'template_4sg47r9', { ... });
+emailjs.init({ publicKey: 'tSLSXcGfuU3S3XDr4' });
+emailjs.sendForm('service_7dunjfz', 'template_4sg47r9', contactForm);
 ```
 
 **Step 4 — Deploy to Vercel**
@@ -211,6 +236,8 @@ Or connect the GitHub repo on [vercel.com](https://vercel.com) — auto-detects 
 |---|---|
 | 🥇 Orbix — 1st Place | IIIT Delhi · 2026 |
 | 🥈 HACKRUST — 2nd Place | DCRUST Murthal · 2026 |
+| 🥈 Technophilia 7.0 — 2nd Place | College of Vocational Studies, University of Delhi · 2026 |
+| 🏁 SSH-01 Finalist | PIET · Satyaansh Softech Pvt. Ltd. |
 | 🚀 National Technology Day 2025 — 2nd Position | GPMA · Project Exhibition |
 | 🎨 Visual Vortex 2.0 | GDG on Campus · Rishihood University |
 | 🏅 Best Volunteer Award | NSS · Awarded by IPS Officer |

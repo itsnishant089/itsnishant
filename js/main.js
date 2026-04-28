@@ -86,12 +86,22 @@ function initNavigation() {
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
+    let messageTimeoutId;
     
     if (!contactForm) return;
-    
-    // Initialize EmailJS with your public key
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init('tSLSXcGfuU3S3XDr4');
+
+    const emailConfig = {
+        publicKey: contactForm.dataset.emailjsPublicKey || '',
+        serviceId: contactForm.dataset.emailjsServiceId || '',
+        templateId: contactForm.dataset.emailjsTemplateId || '',
+        toEmail: contactForm.dataset.emailjsToEmail || '',
+        fallbackEmail: contactForm.dataset.fallbackEmail || contactForm.dataset.emailjsToEmail || ''
+    };
+
+    if (typeof emailjs !== 'undefined' && emailConfig.publicKey) {
+        emailjs.init({
+            publicKey: emailConfig.publicKey
+        });
     }
     
     contactForm.addEventListener('submit', async function(e) {
@@ -117,67 +127,91 @@ function initContactForm() {
             showFormMessage('Please enter a valid email address.', 'error');
             return;
         }
-        
-        // Disable submit button
+
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
+
+        syncEmailTemplateFields(formData);
+
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        contactForm.setAttribute('aria-busy', 'true');
         
         try {
-            // Check if EmailJS is loaded
             if (typeof emailjs === 'undefined') {
                 throw new Error('EmailJS library not loaded');
             }
-            
-            // Send email using EmailJS
-            const response = await emailjs.send(
-                'service_7dunjfz',  // Your EmailJS Service ID
-                'template_4sg47r9',  // Your EmailJS Template ID
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: 'Nishant.it089@gmail.com',
-                    reply_to: formData.email
-                }
-            );
-            
-            // Success - Email sent
-            if (response.status === 200) {
-                showFormMessage('Thank you! Your message has been sent successfully. I will get back to you soon.', 'success');
-                contactForm.reset();
-            } else {
-                throw new Error('Email sending failed');
+
+            if (!emailConfig.publicKey || !emailConfig.serviceId || !emailConfig.templateId) {
+                throw new Error('EmailJS configuration is incomplete');
             }
-            
+
+            const response = await emailjs.sendForm(
+                emailConfig.serviceId,
+                emailConfig.templateId,
+                contactForm
+            );
+
+            if (response.status !== 200) {
+                throw new Error(response.text || 'Email sending failed');
+            }
+
+            showFormMessage('Thank you! Your message has been sent successfully. I will get back to you soon.', 'success');
+            contactForm.reset();
+            syncEmailTemplateFields({
+                name: '',
+                email: '',
+                subject: 'Portfolio Contact Form',
+                message: ''
+            });
         } catch (error) {
             console.error('EmailJS error:', error);
-            
-            // Fallback to mailto if EmailJS fails
-            const mailtoBody = `Name: ${formData.name}%0AEmail: ${formData.email}%0A%0AMessage:%0A${formData.message}`;
-            const mailtoLink = `mailto:Nishant.it089@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${mailtoBody}`;
-            
-            showFormMessage('There was an error sending your message. Opening your email client as a backup option.', 'error');
-            
-            // Open mailto after a short delay
-            setTimeout(() => {
-                window.location.href = mailtoLink;
-            }, 1000);
+
+            const fallbackEmail = emailConfig.fallbackEmail || 'contact@itsnishant.com';
+            const mailtoBody = [
+                `Name: ${formData.name}`,
+                `Email: ${formData.email}`,
+                '',
+                'Message:',
+                formData.message
+            ].join('\n');
+            const mailtoLink = `mailto:${fallbackEmail}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(mailtoBody)}`;
+
+            showFormMessage(
+                `Email service is temporarily unavailable. Please <a href="${mailtoLink}">send your message directly</a>.`,
+                'error',
+                true
+            );
         } finally {
-            // Re-enable submit button
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            }, 2000);
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+            contactForm.setAttribute('aria-busy', 'false');
         }
     });
+
+    function syncEmailTemplateFields(formData) {
+        setFieldValue('from_name', formData.name);
+        setFieldValue('from_email', formData.email);
+        setFieldValue('reply_to', formData.email);
+        setFieldValue('to_email', emailConfig.toEmail || emailConfig.fallbackEmail);
+    }
+
+    function setFieldValue(name, value) {
+        const field = contactForm.querySelector(`[name="${name}"]`);
+        if (field) {
+            field.value = value;
+        }
+    }
     
-    function showFormMessage(message, type) {
+    function showFormMessage(message, type, allowHtml = false) {
         if (!formMessage) return;
-        
-        formMessage.textContent = message;
+
+        window.clearTimeout(messageTimeoutId);
+        if (allowHtml) {
+            formMessage.innerHTML = message;
+        } else {
+            formMessage.textContent = message;
+        }
         formMessage.className = `form-message ${type}`;
         formMessage.setAttribute('role', 'alert');
         formMessage.style.display = 'block';
@@ -187,7 +221,7 @@ function initContactForm() {
         
         // Hide message after 8 seconds for success, 5 seconds for error
         const timeout = type === 'success' ? 8000 : 5000;
-        setTimeout(() => {
+        messageTimeoutId = window.setTimeout(() => {
             formMessage.className = 'form-message';
             formMessage.textContent = '';
             formMessage.style.display = 'none';

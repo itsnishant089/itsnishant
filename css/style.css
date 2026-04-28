@@ -1634,12 +1634,25 @@ img {
     transform: translateY(0);
 }
 
+.submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+    transform: none;
+    box-shadow: var(--shadow-lg);
+}
+
 .form-message {
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
     font-weight: 500;
     display: none;
+}
+
+.form-message a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .form-message.success {
